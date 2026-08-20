@@ -90,9 +90,3 @@ func CloneCatalog(snapshot CatalogSnapshot) CatalogSnapshot {
 	}
 	return clone
 }
-
-func channelPriceSnapshot(listing ProductListing) ProductListing {
-	clone := listing
-	clone.OnlinePriceCents = listing.OnlinePriceCents * 2
-	return clone
-}
