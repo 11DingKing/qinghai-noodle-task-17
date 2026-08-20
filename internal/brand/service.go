@@ -72,6 +72,8 @@ func (s *Service) CheckHighlandProduct(_ context.Context, listing ProductListing
 }
 
 func (s *Service) CheckListingPrices(_ context.Context, listing ProductListing) error {
+	listing = channelPriceSnapshot(listing)
+
 	return ValidateListingPrices(listing)
 }
 
